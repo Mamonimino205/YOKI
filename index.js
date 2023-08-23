@@ -163,7 +163,7 @@ app.get("/*", function(req, res) {
 
 //mongodb connection
 mongoose.connect(
-    `mongodb+srv://mamonimino205:eric@cluster0.ovfawgp.mongodb.net/`, {
+    `mongodb+srv://mamonimino205:eric@cluster0.ovfawgp.mongodb.net/yoki`, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         // tlsInsecure: true,
