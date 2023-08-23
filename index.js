@@ -163,7 +163,7 @@ app.get("/*", function(req, res) {
 
 //mongodb connection
 mongoose.connect(
-    `mongodb://localhost:27017/rayzi?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false`, {
+    `mongodb+srv://mamonimino205:eric@cluster0.ovfawgp.mongodb.net/`, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         // tlsInsecure: true,
