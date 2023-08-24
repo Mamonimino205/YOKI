@@ -18,7 +18,7 @@ const FTPStorage = require('multer-ftp-storage');
 
 module.exports = new FTPStorage({
   ftp_config: {
-    host: "http://ftp.lukra.net/",
+    host: "ftp.lukra.net",
     secure: false, // enables FTPS/FTP with TLS
     user: "rayne@geniu.app",
     password: "iKPJWdt68ch2hYk",
