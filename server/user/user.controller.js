@@ -533,6 +533,8 @@ exports.updateProfile = async (req, res) => {
       // compress image
       // compressImage(req.file);
 
+      console.log(req.file.path);
+
       user.image = config.SERVER_PATH + req.file.path;
     }
     // else {
