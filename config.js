@@ -15,7 +15,7 @@ module.exports = {
     PASSWORD: "",
 
     //secret key for jwt
-    JWT_SECRET: "",
+    JWT_SECRET: "JWT_SECRET",
 
     SERVER_PATH: "", // example :https://sdgserhgdhbrtsfgs.com/
 
