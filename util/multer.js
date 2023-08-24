@@ -1,26 +1,17 @@
-const multer = require("multer");
-const fs = require("fs");
-const FTPStorage = require('multer-ftp-storage');
+const cloudinary = require('cloudinary').v2;
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
 
-// module.exports = multer.diskStorage({
-//   filename: (req, file, callback) => {
-//     const filename =
-//       Date.now() + Math.floor(Math.random() * 100) + file.originalname.replace(/ /g, "");
-//     callback(null, filename);
-//   },
-//   destination: (req, file, callback) => {
-//     if (!fs.existsSync("storage")) {
-//       fs.mkdirSync("storage");
-//     }
-//     callback(null, "storage");
-//   },
-// });
+// Configure Cloudinary
+cloudinary.config({
+    cloud_name: "dp7ffagv9",
+    api_key: "449981832294131",
+    api_secret: "Tb25C3oqQlrv3Vg3be4rUOJ1DrA",
+});
 
-module.exports = new FTPStorage({
-  ftp_config: {
-    host: "ftp.lukra.net",
-    secure: false, // enables FTPS/FTP with TLS
-    user: "rayne@geniu.app",
-    password: "iKPJWdt68ch2hYk",
+
+module.exports =  new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+      folder: 'upload',
   },
 });
